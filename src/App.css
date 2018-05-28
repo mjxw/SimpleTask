@@ -1,0 +1,154 @@
+/* HEADER CSS */
+.App-header {
+  display: grid;
+  background-color: white;
+  height: 5%;
+  color: rgb(72, 164, 236);
+  border-bottom: 2px solid rgb(229, 229, 229);
+}
+
+.App-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-left: 5%;
+  grid-column: 1;
+  justify-self: start;
+}
+
+.Welcome {
+  font-size: 1.1em;
+  grid-column: 6;
+  padding-right: 3%;
+  font-weight: lighter;
+  justify-self: end;  
+  color: rgb(68, 68, 68);
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* BODY CSS */
+.Body {
+  padding-top: 3%;
+  width: 90%;
+  margin: auto;
+}
+
+.Body-title{
+  color: rgb(68, 68, 68);  
+}
+
+
+/* STATUS BAR CSS */
+.Status-bar {
+  width: 100%;
+  padding-top: 1%;
+}
+
+#complete .card-body {
+  background-color: rgb(103, 199, 132);  
+}
+
+#incomplete .card-body {
+  background-color: rgb(72, 164, 236);  
+}
+
+/* TASKS SECTION CSS */
+.Task-section {
+  padding-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+/* ADD TASK CSS */
+.Add-box {
+  color: rgb(168, 187, 198);
+  padding: 2.5%;
+  cursor: pointer;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Add-box p {
+  font-size: 1.2em;    
+}
+
+.Add-area #Task-name {
+  border: 0;
+  box-shadow: none;
+}
+
+.Add-area #Save-btn {
+  font-weight: bold;
+  border: none;
+  font-size: 1.2em;  
+}
+
+.Add-area form {
+  display:grid;
+  grid-template-columns: 1fr .3fr;
+}
+
+/* TASK ITEM CSS*/
+.Completed-task {
+  color: rgb(103, 199, 132);
+}
+
+.Complete-task {
+  color: rgb(103, 199, 132) !important;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.Active-task {
+  color: rgb(168, 187, 198);
+}
+
+.Task-name{
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgb(110, 125, 134);
+}
+
+.Edit-box {
+  background-color:rgb(44, 71, 88) !important;
+  display: flex;
+}
+
+.Edit-area {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Edit-task {
+  cursor: pointer;
+  border-left: 1px solid white;
+  width: 100%;
+  text-align: center;
+}
+
+.Undo-task {
+  color: rgb(277, 111, 83);
+  cursor:pointer;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* FOOTER CSS */
+.text-muted {
+  position:fixed;
+  bottom:0;
+}
+
+.Powered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;  
+}
