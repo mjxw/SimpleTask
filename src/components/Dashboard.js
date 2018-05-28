@@ -25,37 +25,18 @@ class Dashboard extends Component {
   }
 
   onCompleteTask(index) {
-    // let updatedTasks = this.state.tasks.slice();
-    // updatedTasks[index].active = false;
-    // updatedTasks[index].completed = true;
-    // this.setState({
-    //   tasks: updatedTasks
-    // });
     this.props.completeTask(index);
   }
 
   onUndoTask(index) {
-    // let updatedTasks = this.state.tasks.slice();
-    // updatedTasks[index].active = true;
-    // updatedTasks[index].completed = false;
-    // this.setState({
-    //   tasks: updatedTasks
-    // });
     this.props.undoTask(index);
   }
 
   onEditTask(index) {
-    // let updatedTasks = this.state.tasks.slice();
-    // updatedTasks[index].taskName = this.state.editValue;
-    // this.setState({
-    //   tasks: updatedTasks
-    // });
-    // this.setState({editValue: ''});
     this.props.editTask(index);
   }
 
   handleChange(e) {
-    // this.setState({editValue: e.target.value});    
     this.props.handleChange(e.target.value);
   }
 
@@ -76,7 +57,7 @@ class Dashboard extends Component {
         <div className="Task-section">
     
           {this.props.tasks.map((task, index) => 
-            <Task task= {task} key={index} onComplete={() => this.onCompleteTask(index)} onUndo={() => this.onUndoTask(index)} onEdit={() => this.onEditTask(index)} handleChange={this.handleChange} editValue={this.state.editValue}/>
+            <Task task= {task} key={index} onComplete={() => this.onCompleteTask(index)} onUndo={() => this.onUndoTask(index)} onEdit={() => this.onEditTask(index)} handleChange={this.handleChange} editValue={this.props.editValue}/>
           )}
 
           <TaskAdder onTaskAdded={this.onTaskAdded} />
